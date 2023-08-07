@@ -55,7 +55,7 @@ func _process(delta):
 
 func _input(ev):
 	if ev is InputEventKey and ev.is_pressed():
-		if ev.get_scancode() == KEY_ENTER and !cheated and is_instance_valid(Global.nav):
+		if ev.get_scancode() == KEY_ENTER and !cheated and Global.nav != null:
 			if last_keys.find("CEOMINDSET") != -1:
 				Global.player.UI.notify("Cheat prompt activated", Color(1, 1, 1))
 				prompt_inst = Prompt.instance()
